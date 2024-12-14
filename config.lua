@@ -1,24 +1,24 @@
 Config = Config or {}
 
-Config.Framework = 'qbx' -- qbcore or qbx
+Config.Framework = 'qbcore' -- qbcore or qbx
 Config.Debug = true -- For developers and troubleshooting issues
 Config.UseTarget = true -- Whether to use QB or OX Target or not
-Config.EnableRobbery = true -- Make it possible to break into motel rooms!
+Config.EnableRobbery = false -- Make it possible to break into motel rooms!
 Config.RestrictRooms = false -- If set to true, people can only rent 1 room at a time!
 Config.RestrictMotels = true -- If set to true, people cna only buy 1 motel at a time!
 Config.WipeStash = true -- Remove stash when room is no longere rented!
-Config.AllowAutoPay = false -- Allow people to enable automatic payment for their motel or not!
+Config.AllowAutoPay = true -- Allow people to enable automatic payment for their motel or not!
 Config.Lockpick = 'lockpick' -- Item to lockpick doors if Config.EnableRobbery is set to true!
 Config.MotelKey = 'motelkey' -- The item used for motel keys!
-Config.CopCount = 0 -- How many cops required to break into a motel room if Config.EnableRobbery is set to true!
-Config.LockpickLoseChance = 0 -- How high chance to lose lockpick when breaking into house(Can be set to 100 and 0)
+Config.CopCount = 2 -- How many cops required to break into a motel room if Config.EnableRobbery is set to true!
+Config.LockpickLoseChance = 50 -- How high chance to lose lockpick when breaking into house(Can be set to 100 and 0)
 Config.SuccessAlarmChance = 75 -- How high a chance police alert will be reported if lockpicking a motel room is succeesfull.
 Config.AppearanceScript = 'qb-clothes' -- qb-clothes or illenium-appearance
 Config.PoliceAlert = 'qbdefault' -- The current modules are; 'qbdefault', 'ps-dispatch'
-Config.DoorlockSystem = 'ox' -- Current options are; 'qb', 'ox'
-Config.InventorySystem = 'ox' -- qb, qs, ox or ps
-Config.TargetScript = 'ox' -- What targetting script you're currently using! 'qb', 'ox'
-Config.PolyZone = 'ox' -- What polyzone script system to use 'PolyZone' or 'ox' Only if Config.UseTarget is set to false
+Config.DoorlockSystem = 'qb' -- Current options are; 'qb', 'ox'
+Config.InventorySystem = 'qb' -- qb, qs, ox or ps
+Config.TargetScript = 'qb' -- What targetting script you're currently using! 'qb', 'ox'
+Config.PolyZone = 'PolyZone' -- What polyzone script system to use 'PolyZone' or 'ox' Only if Config.UseTarget is set to false
 
 Config.Motels = {
     ['bayviewlodge'] = { -- The unique id of the motel!
@@ -48,7 +48,7 @@ Config.Motels = {
 Config.Rooms = {
     ['bayviewlodge'] = {
         {
-            room = 'Room #1', -- Just the name of the room
+            room = 'Rum #1', -- Just the name of the room
             uniqueID = 1, -- Has to match the name of the DoorID in qb-doorlock or ox doorid Config!
             doorPos = vector3(-710.1, 5768.33, 17.83), -- The location where the door is!
             stashPos = vector3(-716.68, 5772.8, 17.65), -- The location of the stash for the player!
@@ -62,7 +62,7 @@ Config.Rooms = {
             renterName = '', -- Leave this be blank!
         },
         {
-            room = 'Room #2',
+            room = 'Rum #2',
             uniqueID = 2,
             doorPos = vector3(-706.13, 5766.45, 17.9),
             stashPos = vector3(-710.92, 5767.11, 17.52),
@@ -76,7 +76,7 @@ Config.Rooms = {
             renterName = '',
         },
         {
-            room = 'Room #3',
+            room = 'Rum #3',
             uniqueID = 3,
             doorPos = vector3(-701.97, 5764.45, 17.85),
             stashPos = vector3(-703.03, 5763.54, 17.52),
@@ -90,7 +90,7 @@ Config.Rooms = {
             renterName = '',
         },
         {
-            room = 'Room #4',
+            room = 'Rum #4',
             uniqueID = 4,
             doorPos = vector3(-698.17, 5762.66, 17.57),
             stashPos = vector3(-699.14, 5761.63, 17.52),
@@ -104,7 +104,7 @@ Config.Rooms = {
             renterName = '',
         },
         {
-            room = 'Room #5',
+            room = 'Rum #5',
             uniqueID = 5,
             doorPos = vector3(-694.21, 5760.81, 17.73),
             stashPos = vector3(-695.26, 5759.95, 17.52),
@@ -118,7 +118,7 @@ Config.Rooms = {
             renterName = '',
         },
         {
-            room = 'Room #6',
+            room = 'Rum #6',
             uniqueID = 6,
             doorPos = vector3(-690.32, 5759.05, 17.72),
             stashPos = vector3(-691.24, 5758.05, 17.52),
@@ -132,7 +132,7 @@ Config.Rooms = {
             renterName = '',
         },
         {
-            room = 'Room #7',
+            room = 'Rum #7',
             uniqueID = 7,
             doorPos = vector3(-686.83, 5759.16, 17.69),
             stashPos = vector3(-685.94, 5757.91, 17.53),
@@ -146,7 +146,7 @@ Config.Rooms = {
             renterName = '',
         },
         {
-            room = 'Room #8',
+            room = 'Rum #8',
             uniqueID = 8,
             doorPos = vector3(-685.47, 5762.31, 17.86),
             stashPos = vector3(-684.03, 5761.77, 17.52),
@@ -160,7 +160,7 @@ Config.Rooms = {
             renterName = '',
         },
         {
-            room = 'Room #9',
+            room = 'Rum #9',
             uniqueID = 9,
             doorPos = vector3(-683.56, 5766.36, 17.94),
             stashPos = vector3(-682.31, 5765.86, 17.52),
@@ -174,7 +174,7 @@ Config.Rooms = {
             renterName = '',
         },
         {
-            room = 'Room #10',
+            room = 'Rum #10',
             uniqueID = 10,
             doorPos = vector3(-681.44, 5770.66, 17.81),
             stashPos = vector3(-680.64, 5769.72, 17.52),
@@ -190,7 +190,7 @@ Config.Rooms = {
     },
     ['davis_motel'] = {
         {
-            room = 'Room #1', -- Just the name of the room
+            room = 'Rum #1', -- Just the name of the room
             uniqueID = 8, -- Has to match the name of the DoorID in qb-doorlock or ox doorid Config!
             doorPos = vector3(398.41, -1790.32, 29.38), -- The location where the door is!
             stashPos = vector3(390.34, -1787.94, 29.23), -- The location of the stash for the player!
